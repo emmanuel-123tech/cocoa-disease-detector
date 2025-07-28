@@ -11,7 +11,7 @@ MODEL_URL = "https://drive.google.com/uc?id=105xnxkx9Tpbh36Sww6IT2YozzPk0vK79"
 MODEL_PATH = "model_tertinggi.h5"
 
 if not os.path.exists(MODEL_PATH):
-    with st.spinner("📦 Downloading model, please wait..."):
+    with st.spinner("📦 Downloading model..."):
         response = requests.get(MODEL_URL)
         with open(MODEL_PATH, "wb") as f:
             f.write(response.content)
@@ -21,7 +21,7 @@ if not os.path.exists(MODEL_PATH):
 model = load_model(MODEL_PATH)
 
 # === Class names (adjust as needed) ===
-class_names = ['Healthy', 'Monilia', 'OtherDisease']  # Customize if needed
+class_names = ['Healthy', 'Monilia', 'OtherDisease']  # Update if you have different classes
 
 # === Streamlit App ===
 st.set_page_config(page_title="Cocoa Disease Detector", layout="centered")
