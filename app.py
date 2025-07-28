@@ -6,24 +6,25 @@ from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
 from PIL import Image
 
-# === Download model from Google Drive if not present ===
+# === Safe path to save model in Hugging Face container ===
+MODEL_PATH = "/tmp/model_tertinggi.h5"
 MODEL_URL = "https://drive.google.com/uc?id=105xnxkx9Tpbh36Sww6IT2YozzPk0vK79"
-MODEL_PATH = "model_tertinggi.h5"
 
+# === Download model only if not already saved ===
 if not os.path.exists(MODEL_PATH):
     with st.spinner("📦 Downloading model..."):
         response = requests.get(MODEL_URL)
         with open(MODEL_PATH, "wb") as f:
             f.write(response.content)
-        st.success("✅ Model downloaded successfully!")
+        st.success("✅ Model downloaded!")
 
 # === Load model ===
 model = load_model(MODEL_PATH)
 
-# === Class names (adjust as needed) ===
-class_names = ['Healthy', 'Monilia', 'OtherDisease']  # Update if you have different classes
+# === Class names ===
+class_names = ['Healthy', 'Monilia', 'OtherDisease']
 
-# === Streamlit App ===
+# === Streamlit UI ===
 st.set_page_config(page_title="Cocoa Disease Detector", layout="centered")
 st.title("🍫 Cocoa Leaf Disease Detection")
 st.write("Upload a cocoa leaf image to detect whether it's healthy or infected.")
