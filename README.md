@@ -1,46 +1,33 @@
 # 🍫 Cocoa Leaf Disease Detection App
 
-This is a Streamlit web app that uses a deep learning model to detect diseases in cocoa leaves from uploaded images.
+This Streamlit app detects whether a cocoa leaf is healthy or infected (e.g., with Monilia) using a deep learning model.
 
-## 🌿 Features
-- Upload a cocoa leaf image (JPG/PNG)
-- Get instant predictions on whether the leaf is:
-  - ✅ Healthy
-  - ⚠️ Infected (e.g., Monilia or other disease)
-- Clean and responsive interface
-- Powered by TensorFlow and Streamlit
+## 💡 How It Works
 
-## 🚀 Live Demo
-👉 [Click here to launch the app](https://share.streamlit.io/) *(Replace with your Streamlit Cloud link after deployment)*
+- Upload a cocoa leaf image
+- The model predicts the disease status
+- View the prediction instantly in your browser
 
----
+## 🚀 Hosted With
 
-## 🧠 Model Info
-- Framework: TensorFlow / Keras
-- Format: `.h5`
-- Input shape: 224x224 RGB images
-- Classes: `Healthy`, `Monilia`, `OtherDisease` *(customizable based on training data)*
+- Streamlit on [Hugging Face Spaces](https://huggingface.co/spaces)
+- TensorFlow 2.12
+- Python 3.9
 
----
+## 📦 Model
 
-## 🗂 Files in This Repo
-| File                 | Purpose                                     |
-|----------------------|---------------------------------------------|
-| `app.py`             | Streamlit app script                        |
-| `model_tertinggi.h5` | Trained Keras model for prediction          |
-| `requirements.txt`   | List of Python packages for deployment      |
-| `README.md`          | Project overview (you’re reading it!)       |
+The model is downloaded automatically from Google Drive on first load:
+- [Download Model Manually](https://drive.google.com/file/d/105xnxkx9Tpbh36Sww6IT2YozzPk0vK79/view)
 
----
+## 📂 Files
 
-## 💻 How to Run Locally
-```bash
-# Clone the repo
-git clone https://github.com/yourusername/cocoa-disease-detector
-cd cocoa-disease-detector
+| File                | Description                      |
+|---------------------|----------------------------------|
+| `app.py`            | Main Streamlit application       |
+| `requirements.txt`  | Python dependencies              |
+| `.huggingface.yml`  | Hugging Face deployment config   |
+| `README.md`         | This readme                      |
 
-# Install dependencies
-pip install -r requirements.txt
+## 👨🏽‍💻 Author
 
-# Run Streamlit
-streamlit run app.py
+Built by Emmanuel Ebiendele • Powered by AI and Agriculture 🍃
