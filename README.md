@@ -1,33 +1,15 @@
-# 🍫 Cocoa Leaf Disease Detection App
+# 🍫 Cocoa Disease Detector – Streamlit App
 
-This Streamlit app detects whether a cocoa leaf is healthy or infected (e.g., with Monilia) using a deep learning model.
+Detect diseases in cocoa leaves using deep learning, hosted with Streamlit on Hugging Face Spaces (Docker SDK).
 
-## 💡 How It Works
+## 🧠 Features
+- Upload cocoa leaf images
+- Predict disease: Healthy, Monilia, Other
+- TensorFlow + Streamlit interface
 
-- Upload a cocoa leaf image
-- The model predicts the disease status
-- View the prediction instantly in your browser
+## 🚀 Deployment Notes
+- This app uses a Dockerfile to run Streamlit inside Hugging Face Spaces.
+- The model (`model_tertinggi.h5`) is downloaded from Google Drive at runtime.
 
-## 🚀 Hosted With
-
-- Streamlit on [Hugging Face Spaces](https://huggingface.co/spaces)
-- TensorFlow 2.12
-- Python 3.9
-
-## 📦 Model
-
-The model is downloaded automatically from Google Drive on first load:
-- [Download Model Manually](https://drive.google.com/file/d/105xnxkx9Tpbh36Sww6IT2YozzPk0vK79/view)
-
-## 📂 Files
-
-| File                | Description                      |
-|---------------------|----------------------------------|
-| `app.py`            | Main Streamlit application       |
-| `requirements.txt`  | Python dependencies              |
-| `.huggingface.yml`  | Hugging Face deployment config   |
-| `README.md`         | This readme                      |
-
-## 👨🏽‍💻 Author
-
-Built by Emmanuel Ebiendele • Powered by AI and Agriculture 🍃
+## 🔗 Try it live (once deployed)
+https://huggingface.co/spaces/YOUR_USERNAME/cocoa-disease-detector
