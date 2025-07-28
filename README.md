@@ -1,3 +1,14 @@
+---
+title: Cocoa Disease Detector
+emoji: 🍫
+colorFrom: green
+colorTo: brown
+sdk: docker
+sdk_version: "1.0"
+app_file: app.py
+pinned: false
+---
+
 # 🍫 Cocoa Disease Detector – Streamlit App
 
 Detect diseases in cocoa leaves using deep learning, hosted with Streamlit on Hugging Face Spaces (Docker SDK).
